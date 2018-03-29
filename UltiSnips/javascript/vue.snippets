@@ -1,0 +1,60 @@
+priority -49
+
+snippet iv "import vue" b
+import Vue from 'vue'
+endsnippet
+
+snippet ivr "import vue router" b
+import VueRouter from 'vue-router'
+endsnippet
+
+snippet vsc "vue stateless component" b
+const ${1:ComponentName} = {
+  functional: true,
+  render(h, context) {
+    ${0}
+  }
+}
+
+export default $1
+endsnippet
+
+snippet vtc "template script style" b
+<template>
+${1}
+</template>
+
+<script>
+export default {
+  ${2}
+}
+</script>
+
+<style>
+${3}
+</style>
+endsnippet
+
+snippet vcc "vue class component" b
+class ${1:ComponentName} extends Vue {
+  ${0}
+}
+endsnippet
+
+snippet vms "vuex mapState" b
+...mapState(${1:ComponentName}, {
+  ${0}
+})
+endsnippet
+
+snippet vmm "vuex mapMutations" b
+...mapMutations(${1:ComponentName}, {
+  ${0}
+})
+endsnippet
+
+snippet vma "vuex mapActions" b
+...mapActions(${1:ComponentName}, {
+  ${0}
+})
+endsnippet
