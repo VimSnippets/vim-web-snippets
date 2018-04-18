@@ -1,0 +1,140 @@
+priority -49
+
+snippet ir "import react" b
+import React from 'react'
+endsnippet
+
+snippet irc "import react and component" b
+import React, { Component } from 'react'
+endsnippet
+
+snippet irpc "import react and pure component" b
+import React, { PureComponent } from 'react'
+endsnippet
+
+snippet ird "import react-dom" b
+import ReactDOM from 'react-dom'
+endsnippet
+
+snippet rren "ReactDOM.render()" b
+ReactDOM.render(${0})
+endsnippet
+
+snippet rsc "react stateless component" b
+const ${1:ComponentName} = (${2:props}) => {
+  return (
+    ${0:<div />}
+  )
+}
+
+export default $1
+endsnippet
+
+snippet rcc "react class component" b
+class ${1:ComponentName} extends Component {
+  render() {
+    return (
+      ${0:<div />}
+    )
+  }
+}
+
+snippet rcpc "react class pure component" b
+class ${1:ComponentName} extends PureComponent {
+  render() {
+    return (
+      ${0:<div />}
+    )
+  }
+}
+
+export default $1
+endsnippet
+
+snippet ct "react class constructor" b
+constructor(props) {
+  super(props)
+  ${0}
+}
+endsnippet
+
+snippet cwm "componentWillMount" b
+componentWillMount() {
+  ${0}
+}
+endsnippet
+
+snippet cdm "componentDidMount" b
+componentDidMount() {
+  ${0}
+}
+endsnippet
+
+snippet cwp "componentWillReceiveProps" b
+componentWillReceiveProps(${1:nextProps}) {
+  ${0}
+}
+endsnippet
+
+snippet scu "shouldComponentUpdate" b
+shouldComponentUpdate(${1:nextProps, nextState}) {
+  ${0}
+}
+endsnippet
+
+snippet cwu "componentWillUpdate" b
+componentWillUpdate(${1:nextProps, nextState}) {
+  ${0}
+}
+endsnippet
+
+snippet cdu "componentDidUpdate" b
+componentDidUpdate(${1:prevProps, prevState}) {
+  ${0}
+}
+endsnippet
+
+snippet cwum "componentWillUnmount" b
+componentWillUnmount() {
+  ${0}
+}
+endsnippet
+
+snippet fup "forceUpdate"
+forceUpdate(${0})
+endsnippet
+
+snippet ren "render" b
+render() {
+  return (${0})
+}
+endsnippet
+
+snippet state "this.state" i
+this.state${0}
+endsnippet
+
+snippet set "this.setState()" b
+this.setState({
+  ${1}: ${0},
+})
+endsnippet
+
+snippet props "this.props" i
+this.props${0}
+endsnippet
+
+snippet dp "set default props" i
+defaultProps = {
+  ${0}
+}
+endsnippet
+
+snippet refs "refs"
+this.refs${0}
+endsnippet
+
+snippet fdn "findDOMNode" b
+React.findDOMNode(${0})
+endsnippet
+
