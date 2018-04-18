@@ -3,7 +3,7 @@ extends react
 priority -47
 
 snippet rcc "react class component" b
-class ${1:ComponentName} extends Component<${1:Prop, State = {}}> {
+class ${1:ComponentName} extends Component<${2:Props, State = {}}> {
   render() {
     return (
       ${0:<div />}
@@ -15,7 +15,7 @@ export default $1
 endsnippet
 
 snippet rcpc "react class pure component" b
-class ${1:ComponentName} extends PureComponent<${1:Prop, State = {}}> {
+class ${1:ComponentName} extends PureComponent<${2:Props, State = {}}> {
   render() {
     return (
       ${0:<div />}
@@ -24,10 +24,4 @@ class ${1:ComponentName} extends PureComponent<${1:Prop, State = {}}> {
 }
 
 export default $1
-endsnippet
-
-snippet pt "propTypes" i
-interface ${1:PropTypes} {
-  ${0}
-}
 endsnippet
