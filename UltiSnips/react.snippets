@@ -16,10 +16,6 @@ snippet ird "import react-dom" b
 import ReactDOM from 'react-dom'
 endsnippet
 
-snippet rren "ReactDOM.render()" b
-ReactDOM.render(${0})
-endsnippet
-
 snippet rsc "react stateless component" b
 const ${1:ComponentName} = (${2:props}) => {
   return (
@@ -34,7 +30,9 @@ snippet rcc "react class component" b
 class ${1:ComponentName} extends Component {
   render() {
     return (
-      ${0:<div />}
+      <div>
+	${0}
+      </div>
     )
   }
 }
@@ -54,7 +52,7 @@ class ${1:ComponentName} extends PureComponent {
 export default $1
 endsnippet
 
-snippet ct "react class constructor" b
+snippet rcon "react class constructor" b
 constructor(props) {
   super(props)
   ${0}
@@ -103,10 +101,6 @@ componentWillUnmount() {
 }
 endsnippet
 
-snippet fup "forceUpdate"
-forceUpdate(${0})
-endsnippet
-
 snippet ren "render" b
 render() {
   return (${0})
@@ -118,8 +112,8 @@ this.state${0}
 endsnippet
 
 snippet set "this.setState()" b
-this.setState({
-  ${1}: ${0},
+this.setState((${1:state, props}) => {
+  ${0}
 })
 endsnippet
 
@@ -137,7 +131,36 @@ snippet refs "refs"
 this.refs${0}
 endsnippet
 
-snippet fdn "findDOMNode" b
-React.findDOMNode(${0})
+snippet fup "forceUpdate"
+this.forceUpdate(${0})
 endsnippet
 
+snippet fdn "findDOMNode" b
+ReactDOM.findDOMNode(${0})
+endsnippet
+
+snippet rdr "ReactDOM.render()" b
+ReactDOM.render(${0})
+endsnippet
+
+snippet rdcp "ReactDOM.createPortal()" b
+ReactDOM.createPortal(${0});
+endsnippet
+
+snippet gsbu "getSnapshotBeforeUpdate" b
+getSnapshotBeforeUpdate(${1:prevProps, prevState}) {
+  ${0}
+}
+endsnippet
+
+snippet gdsfp "getDerivedStateFromProps" b
+static getDerivedStateFromProps(${1:nextProps, prevState}) {
+  ${0}
+}
+endsnippet
+
+snippet cdc "componentDidCatch" b
+componentDidCatch(error, info) {
+  ${0}
+}
+endsnippet
