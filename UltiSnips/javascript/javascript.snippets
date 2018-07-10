@@ -1,6 +1,6 @@
 priority -48
 
-snippet req "const ... = require(...)" b
+snippet re "const ... = require(...)" b
 const ${0} = require('${1}')
 endsnippet
 
@@ -160,8 +160,8 @@ constructor(${1}) {
 }
 endsnippet
 
-snippet pro "prototype"
-${1:class}.prototype.${0:method}
+snippet .pro "prototype" i
+.prototype.${0:method}
 endsnippet
 
 snippet by. "elements by class" b
