@@ -32,10 +32,12 @@ endsnippet
 
 snippet rcc "react class component" b
 class ${1:ComponentName} extends Component {
+	static displayName = '${1:ComponentName}'
+
   render() {
     return (
       <div>
-	${0}
+        ${0}
       </div>
     )
   }
